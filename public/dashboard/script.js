@@ -1,4 +1,4 @@
-// KBCS Dashboard Script v2.3 - Final Stable Version
+// KBCS Dashboard Script v2.4 - Final Verified Version
 
 const socket = io();
 
@@ -45,18 +45,12 @@ socket.on('disconnect', () => {
 
 // The main listener that updates the entire dashboard based on the server's state
 socket.on('updateState', (state) => {
-    // console.log('Received state update from server:', state); // Uncomment for debugging
     renderTeams(state.teams);
-    // CRITICAL FIX: Pass both the question AND the screen status to the render function
     renderPreview(state.currentQuestion, state.gameState.isScreenActive);
 });
 
 // --- UI Rendering Functions: Draw what the user sees ---
 
-/**
- * Renders the list of team cards with their scores and buttons.
- * @param {Array} teams - The array of team objects from the server.
- */
 function renderTeams(teams) {
     if (!teams) return;
     teamContainer.innerHTML = '';
@@ -83,18 +77,14 @@ function renderTeams(teams) {
     });
 }
 
-/**
- * Renders the live question and answer in the dashboard's preview panel.
- * @param {Object} questionData - The current question object from the server.
- * @param {boolean} isScreenActive - Whether the main quiz screen is currently showing a question.
- */
 function renderPreview(questionData, isScreenActive) {
-    // CRITICAL FIX: Only show the question if it exists AND the screen is active.
     if (questionData && isScreenActive) {
         previewQuestion.textContent = questionData.question;
-        previewAnswerText.textContent = question.answer;
+        // --- THIS IS THE FIX ---
+        // The variable is 'questionData', not 'question'.
+        previewAnswerText.textContent = questionData.answer;
+        // ----------------------
     } else {
-        // Otherwise, show a default waiting/cleared text.
         previewQuestion.textContent = 'Waiting for the next action...';
         previewAnswerText.textContent = '--';
     }
@@ -102,7 +92,6 @@ function renderPreview(questionData, isScreenActive) {
 
 // --- Event Emitters: Send commands to the server on button clicks ---
 
-// Use event delegation for the dynamically created score buttons
 teamContainer.addEventListener('click', (event) => {
     const target = event.target;
     if (target.tagName === 'BUTTON' && target.dataset.teamId) {

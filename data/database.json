@@ -18,12 +18,12 @@
     {
       "id": 1757664265918,
       "name": "aaaa",
-      "score": 45
+      "score": 0
     }
   ],
   "gameState": {
     "currentRound": 1,
-    "currentQuestionIndex": 1,
-    "isScreenActive": true
+    "currentQuestionIndex": -1,
+    "isScreenActive": false
   }
 }

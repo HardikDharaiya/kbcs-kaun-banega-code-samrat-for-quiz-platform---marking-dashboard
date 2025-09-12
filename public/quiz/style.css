@@ -200,3 +200,20 @@ body {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+
+/* ADD THIS to the end of public/quiz/style.css */
+.question-image {
+    max-width: 80%;
+    max-height: 350px;
+    border-radius: 12px;
+    border: 3px solid var(--accent-blue);
+    margin-bottom: 20px;
+    display: block; /* Allows margin auto to work if needed */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.question-image.hidden {
+    display: none;
+}

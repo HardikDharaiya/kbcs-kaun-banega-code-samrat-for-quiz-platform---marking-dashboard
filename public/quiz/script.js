@@ -1,135 +1,80 @@
-// KBCS Quiz Platform Script v2.3 - Final Stable Version
+// KBCS Quiz Platform Script v2.4 - THEMATIC ROUNDS FINAL
 
 const socket = io();
 
-// --- Get all DOM elements once for efficiency ---
-// Containers and Overlays
+// Get DOM elements
 const curtain = document.getElementById('curtain');
 const answerOverlay = document.getElementById('answerOverlay');
 const leaderboardList = document.getElementById('leaderboardList');
 const optionsContainer = document.getElementById('optionsContainer');
-
-// Text Elements
 const roundIndicator = document.getElementById('roundIndicator');
 const questionText = document.getElementById('questionText');
 const answerText = document.getElementById('answerText');
 const timerText = document.getElementById('timerText');
+const questionImage = document.getElementById('questionImage'); // The new image element
 
-// --- Socket Listeners: Handle communication from the server ---
-
-// This is the main listener that redraws the entire screen based on the server's state
+// The main listener that redraws the screen
 socket.on('updateState', (state) => {
-    // console.log('Quiz platform received state update:', state); // Uncomment for debugging
-
     renderLeaderboard(state.teams);
-
-    // CRITICAL FIX: Update the round indicator text every time state is received.
     roundIndicator.textContent = `Round ${state.gameState.currentRound}`;
-
-    // Show the "curtain" if the screen is not active, otherwise show the question.
     curtain.classList.toggle('visible', !state.gameState.isScreenActive);
     curtain.classList.toggle('hidden', state.gameState.isScreenActive);
 
     if (state.gameState.isScreenActive) {
         renderQuestion(state.currentQuestion);
     } else {
-        // If the screen is not active, display a waiting message.
         questionText.textContent = "The Quiz will begin shortly...";
         optionsContainer.innerHTML = '';
+        questionImage.classList.add('hidden'); // Ensure image is hidden between questions
     }
 });
 
-// Listens for the command to reveal the correct answer.
-socket.on('showAnswer', (correctAnswer) => {
-    answerOverlay.classList.remove('hidden');
-    answerText.textContent = correctAnswer;
-
-    // Highlight the correct option visually.
-    const allOptions = optionsContainer.querySelectorAll('.option-item');
-    allOptions.forEach(optionEl => {
-        if (optionEl.dataset.option === correctAnswer) {
-            optionEl.classList.add('correct');
-        }
-    });
-});
-
-// Listens for the command to hide the answer overlay.
-socket.on('hideAnswer', () => {
-    answerOverlay.classList.add('hidden');
-});
-
-// Listens for the 50:50 lifeline and hides two incorrect options.
-socket.on('lifeline:5050', (optionsToHide) => {
-    const allOptions = optionsContainer.querySelectorAll('.option-item');
-    allOptions.forEach(optionEl => {
-        if (optionsToHide.includes(optionEl.dataset.option)) {
-            optionEl.classList.add('hidden-5050');
-        }
-    });
-});
-
-// Listens for the timer start command and begins a 30-second countdown.
-socket.on('startTimer', () => {
-    let time = 30;
-    timerText.textContent = time;
-
-    // Clear any previous timer to prevent multiple timers running at once.
-    if (window.countdownInterval) {
-        clearInterval(window.countdownInterval);
-    }
-
-    window.countdownInterval = setInterval(() => {
-        time--;
-        timerText.textContent = time;
-        if (time <= 0) {
-            clearInterval(window.countdownInterval);
-            timerText.textContent = "0";
-        }
-    }, 1000); // Updates once per second.
-});
+// Other socket listeners (showAnswer, hideAnswer, etc.) are unchanged
+socket.on('showAnswer', (correctAnswer) => { /* ... */ });
+socket.on('hideAnswer', () => { /* ... */ });
+socket.on('lifeline:5050', (optionsToHide) => { /* ... */ });
+socket.on('startTimer', () => { /* ... */ });
 
 
-// --- UI Rendering Functions: Draw what the user sees ---
+// --- UI RENDERING FUNCTIONS ---
 
-/**
- * Renders the leaderboard with team names and scores.
- * @param {Array} teams - The array of team objects from the server.
- */
-function renderLeaderboard(teams) {
-    if (!teams) return;
-    leaderboardList.innerHTML = '';
-    const sortedTeams = [...teams].sort((a, b) => b.score - a.score); // Sort by score
-    sortedTeams.forEach(team => {
-        const listItem = document.createElement('li');
-        listItem.innerHTML = `<span>${team.name}</span><span>${team.score}</span>`;
-        leaderboardList.appendChild(listItem);
-    });
-}
-
-/**
- * Renders the current question and its multiple-choice options.
- * @param {Object} questionData - The current question object from the server.
- */
 function renderQuestion(questionData) {
     if (!questionData) {
         questionText.textContent = "Waiting for the next question...";
         optionsContainer.innerHTML = '';
+        questionImage.classList.add('hidden');
         return;
     }
 
-    answerOverlay.classList.add('hidden'); // Ensure answer is hidden initially.
+    answerOverlay.classList.add('hidden');
     questionText.textContent = questionData.question;
-    optionsContainer.innerHTML = ''; // Clear old options.
+    optionsContainer.innerHTML = '';
+
+    // --- CRITICAL LOGIC FOR THEMATIC ROUNDS ---
+    if (questionData.image) {
+        questionImage.src = questionData.image;
+        questionImage.classList.remove('hidden');
+    } else {
+        questionImage.classList.add('hidden');
+        questionImage.src = '';
+    }
+    // ------------------------------------------
 
     const prefixes = ['A', 'B', 'C', 'D'];
     questionData.options.forEach((option, index) => {
         const optionElement = document.createElement('div');
         optionElement.className = 'option-item';
         optionElement.dataset.option = option;
-        optionElement.innerHTML = `
-            <span class="option-prefix">${prefixes[index]}</span>
-            <span class="option-text">${option}</span>
-        `;
+        optionElement.innerHTML = `<span class="option-prefix">${prefixes[index]}</span><span class="option-text">${option}</span>`;
         optionsContainer.appendChild(optionElement);
     });
 }
+
+function renderLeaderboard(teams) { /* ... Unchanged ... */ }
+
+// --- UNCHANGED HELPER CODE (to make the file complete) ---
+function renderLeaderboard(teams) { if (!teams) return; leaderboardList.innerHTML = ''; const sortedTeams = [...teams].sort((a, b) => b.score - a.score); sortedTeams.forEach(team => { const listItem = document.createElement('li'); listItem.innerHTML = `<span>${team.name}</span><span>${team.score}</span>`; leaderboardList.appendChild(listItem); }); }
+socket.on('showAnswer', (correctAnswer) => { answerOverlay.classList.remove('hidden'); answerText.textContent = correctAnswer; const allOptions = optionsContainer.querySelectorAll('.option-item'); allOptions.forEach(optionEl => { if (optionEl.dataset.option === correctAnswer) { optionEl.classList.add('correct'); } }); });
+socket.on('hideAnswer', () => { answerOverlay.classList.add('hidden'); });
+socket.on('lifeline:5050', (optionsToHide) => { const allOptions = optionsContainer.querySelectorAll('.option-item'); allOptions.forEach(optionEl => { if (optionsToHide.includes(optionEl.dataset.option)) { optionEl.classList.add('hidden-5050'); } }); });
+socket.on('startTimer', () => { let time = 30; timerText.textContent = time; if (window.countdownInterval) { clearInterval(window.countdownInterval); } window.countdownInterval = setInterval(() => { time--; timerText.textContent = time; if (time <= 0) { clearInterval(window.countdownInterval); timerText.textContent = "0"; } }, 1000); });
