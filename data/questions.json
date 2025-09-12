@@ -1,0 +1,43 @@
+{
+  "round1": [
+    { "question": "What does CSS stand for?", "options": ["Cascading Style Sheets", "Creative Style Sheets", "Computer Style Sheets", "Colorful Style Sheets"], "answer": "Cascading Style Sheets" },
+    { "question": "Which HTML tag is used to define an unordered list?", "options": ["<ol>", "<li>", "<ul>", "<list>"], "answer": "<ul>" },
+    { "question": "In JavaScript, what keyword is used to declare a variable that cannot be reassigned?", "options": ["let", "var", "const", "static"], "answer": "const" },
+    { "question": "What is the name of the popular version control system created by Linus Torvalds?", "options": ["SVN", "Mercurial", "Git", "CVS"], "answer": "Git" },
+    { "question": "Which company developed the Python programming language?", "options": ["It was developed by Guido van Rossum", "Microsoft", "Google", "Facebook"], "answer": "It was developed by Guido van Rossum" },
+    { "question": "What does API stand for?", "options": ["Application Programming Interface", "Automated Program Interaction", "Application Protocol Interface", "Algorithmic Programming Interface"], "answer": "Application Programming Interface" },
+    { "question": "Which of these is NOT a JavaScript framework/library?", "options": ["React", "Angular", "Vue", "Laravel"], "answer": "Laravel" },
+    { "question": "What does 'SQL' stand for?", "options": ["Structured Query Language", "Simple Question Language", "Standard Query Logic", "System Query Language"], "answer": "Structured Query Language" },
+    { "question": "In binary, what is the decimal value of 101?", "options": ["3", "5", "6", "9"], "answer": "5" },
+    { "question": "What is the file extension for a standard JavaScript file?", "options": [".java", ".j", ".script", ".js"], "answer": ".js" },
+    { "question": "Which data structure operates on a 'First-In, First-Out' (FIFO) basis?", "options": ["Stack", "Queue", "Array", "Tree"], "answer": "Queue" },
+    { "question": "What does 'GHz' stand for when referring to a computer's processor?", "options": ["Gigahertz", "Gigahetz", "Gigabyte Hertz", "Gigaheap"], "answer": "Gigahertz" },
+    { "question": "What is the common name for the error code '404' in HTTP?", "options": ["Not Found", "Server Error", "Access Denied", "Bad Request"], "answer": "Not Found" },
+    { "question": "Which language is primarily used for styling web pages?", "options": ["HTML", "JavaScript", "Python", "CSS"], "answer": "CSS" },
+    { "question": "What does 'IP' stand for in 'IP Address'?", "options": ["Internet Protocol", "Internal Protocol", "Internet Provider", "Internal Provider"], "answer": "Internet Protocol" },
+    { "question": "Which company's mobile operating system is called 'Android'?", "options": ["Apple", "Microsoft", "Google", "Samsung"], "answer": "Google" },
+    { "question": "What does 'RAM' stand for in computer hardware?", "options": ["Random Access Memory", "Read-Only Memory", "Rapid Access Memory", "Real-time Access Memory"], "answer": "Random Access Memory" },
+    { "question": "What is the name for a small piece of data a website stores on your computer?", "options": ["Cache", "Cookie", "Log", "Session"], "answer": "Cookie" },
+    { "question": "What is the 'brain' of the computer often called?", "options": ["GPU", "RAM", "CPU", "Motherboard"], "answer": "CPU" },
+    { "question": "Which programming paradigm does C++ primarily follow?", "options": ["Functional", "Procedural", "Object-Oriented", "Logical"], "answer": "Object-Oriented" }
+  ],
+  "round2": [
+    { "question": "I am a design principle that suggests users shouldn't have to think hard to use an interface. My name is often the title of a popular UX book by Steve Krug. What am I?", "options": ["Don't Make Me Think", "Keep It Simple, Stupid", "User-Centric Design", "Form Follows Function"], "answer": "Don't Make Me Think" },
+    { "question": "Which company uses a logo with four colored squares (red, green, blue, and yellow) that form a window?", "options": ["Apple", "IBM", "Microsoft", "Google"], "answer": "Microsoft" },
+    { "question": "In UI design, what is the name for a temporary, small notification window that appears on top of the main content, often in a corner of the screen?", "options": ["Modal", "Popup", "Toast", "Alert"], "answer": "Toast" },
+    { "question": "I am a social media app famous for disappearing messages and a ghost as my logo. What am I?", "options": ["Telegram", "Snapchat", "WhatsApp", "Signal"], "answer": "Snapchat" },
+    { "question": "What term describes a user interface element that is intentionally designed to look like a physical object, like a trash can icon for deleting files?", "options": ["Minimalism", "Flat Design", "Skeuomorphism", "Material Design"], "answer": "Skeuomorphism" },
+    { "question": "Which of these color models is most commonly used for web design, representing colors as mixtures of red, green, and blue?", "options": ["CMYK", "RGB", "HSL", "Pantone"], "answer": "RGB" },
+    { "question": "I am a code hosting platform with an 'Octocat' as my mascot. What am I?", "options": ["GitLab", "Bitbucket", "SourceForge", "GitHub"], "answer": "GitHub" },
+    { "question": "What is the term for a low-fidelity, basic visual representation of a user interface, often drawn by hand or with simple software?", "options": ["Prototype", "Mockup", "Wireframe", "Comp"], "answer": "Wireframe" },
+    { "question": "I am a web browser developed by Google, known for its speed and minimalist interface. What am I?", "options": ["Firefox", "Safari", "Edge", "Chrome"], "answer": "Chrome" },
+    { "question": "In web design, what does 'above the fold' refer to?", "options": ["The most important content", "The header section", "Content visible without scrolling", "The website's navigation bar"], "answer": "Content visible without scrolling" }
+  ],
+  "round3": [
+    { "question": "In database transactions, what does the 'C' in the 'ACID' acronym stand for?", "options": ["Concurrency", "Consistency", "Commit", "Complexity"], "answer": "Consistency" },
+    { "question": "What is the core principle of 'idempotency' in API design, especially for RESTful services?", "options": ["Making the same request once has the same effect as making it multiple times", "Every request must be unique", "The API must respond in less than 100ms", "Data should be returned in JSON format only"], "answer": "Making the same request once has the same effect as making it multiple times" },
+    { "question": "What famous computer science algorithm, developed by Edsger Dijkstra, is used to find the shortest path between nodes in a graph?", "options": ["A* Search Algorithm", "Dijkstra's Algorithm", "Floyd-Warshall Algorithm", "Bellman-Ford Algorithm"], "answer": "Dijkstra's Algorithm" },
+    { "question": "In object-oriented programming, what is the concept of bundling data and the methods that operate on that data into a single unit or 'class' called?", "options": ["Inheritance", "Polymorphism", "Abstraction", "Encapsulation"], "answer": "Encapsulation" },
+    { "question": "What is the fundamental difference between a 'compiler' and an 'interpreter'?", "options": ["A compiler is for web, an interpreter is for apps", "A compiler is faster", "A compiler translates the entire program at once; an interpreter translates it line by line", "There is no fundamental difference"], "answer": "A compiler translates the entire program at once; an interpreter translates it line by line" }
+  ]
+}

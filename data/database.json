@@ -1,0 +1,29 @@
+{
+  "teams": [
+    {
+      "id": 1757664262867,
+      "name": "aa",
+      "score": 0
+    },
+    {
+      "id": 1757664263851,
+      "name": "aa",
+      "score": 0
+    },
+    {
+      "id": 1757664265093,
+      "name": "aaaaaa",
+      "score": 0
+    },
+    {
+      "id": 1757664265918,
+      "name": "aaaa",
+      "score": 45
+    }
+  ],
+  "gameState": {
+    "currentRound": 1,
+    "currentQuestionIndex": 1,
+    "isScreenActive": true
+  }
+}

@@ -1,0 +1,225 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --bg-primary: #1e1e1e;
+    --bg-secondary: #2d2d2d;
+    --bg-tertiary: #3c3c3c;
+    --text-primary: #d4d4d4;
+    --text-secondary: #a0a0a0;
+    --accent-blue: #007acc;
+    --accent-green: #2ecc71;
+    --accent-red: #e74c3c;
+    --accent-orange: #f39c12;
+    --border-color: #555;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 20px;
+}
+
+/* --- Header --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-secondary);
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.status-indicator .dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.dot.disconnected { background-color: var(--accent-red); }
+.dot.connected { background-color: var(--accent-green); }
+
+/* --- Main Layout --- */
+.main-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.teams-section, .controls-section {
+    background-color: var(--bg-secondary);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+h2 {
+    margin-top: 0;
+    border-bottom: 2px solid var(--accent-blue);
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+/* --- Teams Section --- */
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.team-card {
+    background-color: var(--bg-tertiary);
+    border-radius: 6px;
+    padding: 15px;
+    border-left: 5px solid var(--accent-blue);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.team-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.team-name {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.team-score {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--accent-green);
+}
+
+.score-controls button {
+    background-color: var(--accent-blue);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-left: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.score-controls .add { background-color: var(--accent-green); }
+.score-controls .subtract { background-color: var(--accent-red); }
+
+.score-controls button:hover {
+    opacity: 0.8;
+}
+
+.placeholder-text {
+    color: var(--text-secondary);
+}
+
+
+/* --- Controls Section --- */
+.control-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.control-button {
+    background-color: var(--accent-blue);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.control-button:hover {
+    opacity: 0.9;
+}
+
+.control-button:active {
+    transform: scale(0.98);
+}
+
+.control-button.clear {
+    background-color: var(--accent-orange);
+}
+
+.control-button.lifeline {
+    background-color: #9b59b6; /* Amethyst */
+}
+
+
+/* --- ADD THIS AT THE END OF YOUR DASHBOARD'S style.css --- */
+
+/* --- Live Preview Section --- */
+.live-preview-section {
+    background-color: var(--bg-tertiary);
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 25px;
+    border: 1px solid var(--border-color);
+}
+
+.live-preview-section h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: var(--accent-blue);
+}
+
+.preview-question {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.preview-answer {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+#previewAnswerText {
+    color: var(--accent-green);
+    font-weight: 700;
+}
+
+/* --- New Button Color Variations --- */
+.control-button.action {
+    background-color: var(--accent-orange);
+}
+
+.control-button.round {
+    background-color: #16a085; /* Green Sea */
+}
+
+/* ADD THIS to the end of public/dashboard/style.css */
+
+.control-button.danger {
+    background-color: var(--accent-red);
+}

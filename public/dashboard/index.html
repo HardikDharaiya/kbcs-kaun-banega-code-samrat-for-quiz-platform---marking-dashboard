@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KBCS - Marking Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Kaun Banega Code Samrat - Control Panel</h1>
+      <div class="status-indicator" id="statusIndicator">
+        <span class="dot disconnected"></span>
+        <span id="statusText">Disconnected</span>
+      </div>
+    </header>
+
+    <main class="main-container">
+      <section class="teams-section">
+        <h2>Team Management</h2>
+        <div class="team-container" id="teamContainer">
+          <p class="placeholder-text">
+            Waiting for server connection to load teams...
+          </p>
+        </div>
+      </section>
+
+      <section class="controls-section">
+        <!-- NEW: Live Question Preview Section -->
+        <div class="live-preview-section">
+          <h3>Live Question Preview</h3>
+          <div class="preview-question" id="previewQuestion">
+            Waiting for next question...
+          </div>
+          <div class="preview-answer" id="previewAnswer">
+            Answer: <span id="previewAnswerText">--</span>
+          </div>
+        </div>
+
+        <!-- NEW: Re-organized Control Sections -->
+        <h2>Game Flow Controls</h2>
+        <div class="control-grid">
+          <button class="control-button" id="nextQuestionBtn">
+            Show Next Question
+          </button>
+          <button class="control-button" id="toggleAnswerBtn">
+            Show / Hide Answer
+          </button>
+          <button class="control-button action" id="startTimerBtn">
+            Start 30s Timer
+          </button>
+          <button class="control-button clear" id="clearScreenBtn">
+            Clear Screen
+          </button>
+        </div>
+
+        <h2>Round Progression</h2>
+        <div class="control-grid">
+          <button class="control-button round" id="setRound1Btn">
+            Reset to Round 1
+          </button>
+          <button class="control-button round" id="setRound2Btn">
+            Start Round 2
+          </button>
+          <button class="control-button round" id="setRound3Btn">
+            Start Round 3
+          </button>
+        </div>
+
+        <h2>Lifeline Controls (Round 3)</h2>
+        <div class="control-grid">
+          <button class="control-button lifeline" id="lifeline5050Btn">
+            Trigger 50:50
+          </button>
+          <button class="control-button lifeline" id="lifelineSwapBtn">
+            Swap Question
+          </button>
+        </div>
+
+        <!-- ADD THIS NEW SECTION to public/dashboard/index.html -->
+        <!-- Place it after the Lifeline Controls section, inside the <section class="controls-section"> -->
+
+        <h2>Reset Controls (Danger Zone)</h2>
+        <div class="control-grid">
+          <button class="control-button danger" id="resetScoresBtn">
+            Reset All Scores
+          </button>
+          <button class="control-button danger" id="clearTeamsBtn">
+            Clear All Teams
+          </button>
+          <button class="control-button danger" id="resetGameBtn">
+            Full Game Reset
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- This script is automatically served by our Socket.IO server -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- This is our custom script file -->
+    <script src="script.js"></script>
+  </body>
+</html>

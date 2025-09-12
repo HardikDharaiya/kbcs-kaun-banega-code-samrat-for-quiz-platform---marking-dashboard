@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KBCS - Team Setup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Team Setup & Management</h1>
+      <p>
+        Add or remove teams before the event begins. Changes are saved
+        automatically.
+      </p>
+
+      <div class="add-team-form">
+        <input
+          type="text"
+          id="teamNameInput"
+          placeholder="Enter new team name..."
+        />
+        <button id="addTeamBtn">Add Team</button>
+      </div>
+
+      <div class="team-list-container">
+        <h2>Registered Teams</h2>
+        <ul id="teamList">
+          <!-- Teams will be dynamically loaded here -->
+        </ul>
+      </div>
+
+      <a href="/dashboard" class="nav-link">Go to Dashboard &rarr;</a>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

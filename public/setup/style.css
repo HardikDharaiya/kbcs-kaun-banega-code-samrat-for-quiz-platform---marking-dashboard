@@ -1,0 +1,131 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --bg-primary: #1e1e1e;
+    --bg-secondary: #2d2d2d;
+    --text-primary: #d4d4d4;
+    --accent-blue: #007acc;
+    --accent-red: #e74c3c;
+    --border-color: #555;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
+    min-height: 100vh;
+}
+
+/* --- Main Container --- */
+.container {
+    width: 100%;
+    max-width: 700px;
+    background-color: var(--bg-secondary);
+    padding: 30px 40px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+h1 {
+    font-size: 2em;
+    margin-top: 0;
+    border-bottom: 2px solid var(--accent-blue);
+    padding-bottom: 10px;
+}
+
+p {
+    color: #a0a0a0;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* --- Add Team Form --- */
+.add-team-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+#teamNameInput {
+    flex-grow: 1;
+    padding: 12px;
+    font-size: 1em;
+    background-color: #3c3c3c;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 5px;
+}
+
+#addTeamBtn {
+    background-color: var(--accent-blue);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+#addTeamBtn:hover {
+    background-color: #005a9e;
+}
+
+
+/* --- Team List --- */
+.team-list-container h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+#teamList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#teamList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3c3c3c;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.delete-btn {
+    background-color: var(--accent-red);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* --- Navigation Link --- */
+.nav-link {
+    display: block;
+    margin-top: 30px;
+    text-align: right;
+    font-size: 1.2em;
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
