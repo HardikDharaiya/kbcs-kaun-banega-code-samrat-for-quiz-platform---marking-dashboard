@@ -31,7 +31,7 @@
     { "question": "What is statistically one of the most common, and least secure, passwords in the world?", "options": ["password", "111111", "qwerty", "123456"], "answer": "123456" },
     { "question": "What do you call a large group of programmers working together?", "options": ["A swarm", "A confusion", "An array", "A compile"], "answer": "An array" },
     { "question": "In \"The Matrix,\" which pill do you take to stay in Wonderland?", "options": ["The blue pill", "The red pill", "The green pill", "A Paracetamol"], "answer": "The red pill" },
-    { "question": "What kind of glasses do programmers wear?", "options": ["Expensive designer ones", "Screen-shot glasses", "X-Ray specs", "They don't, they just squint"], "answer": "Screen-shot glasses" },
+    { "question": "What kind of glasses do programmers wear?", "options": [" ", "Screen-shot glasses", "X-Ray specs", "They don't, they just squint"], "answer": "Screen-shot glasses" },
     { "question": "Which tech company's original corporate slogan was \"Don't be evil\"?", "options": ["Apple", "Google", "Facebook", "Microsoft"], "answer": "Google" },
     { "question": "In an IP address, what does 'IP' stand for?", "options": ["Important Person", "Information Provider", "Internet Protocol", "Internal Pizza"], "answer": "Internet Protocol" },
     { "question": "In CSS, what property is used to change the background color of an element?", "options": ["background-color", "color", "bg-color", "mood-ring"], "answer": "background-color" },
@@ -40,18 +40,7 @@
     { "question": "The animal mascot for the Go programming language is what?", "options": ["A goat", "A giraffe", "A gopher", "A goose"], "answer": "A gopher" },
     { "question": "What is the unofficial uniform for a startup founder in Silicon Valley?", "options": ["A three-piece suit", "A hoodie and jeans", "A superhero cape", "A kurta pajama"], "answer": "A hoodie and jeans" },
     { "question": "What key combination is famously known as the \"three-finger salute\" for fixing problems in Windows?", "options": ["Ctrl + Shift + Esc", "Alt + F4", "Ctrl + Alt + Del", "Windows Key + L"], "answer": "Ctrl + Alt + Del" },
-    { "question": "The term \"bug\" for a computer glitch was popularized after a real insect was found in which early computer?", "options": ["ENIAC", "Harvard Mark II", "A Dell Laptop", "IBM 701"], "answer": "Harvard Mark II" },
-    { "question": "What is the name of the world's most popular font, famously hated by many professional designers?", "options": ["Comic Sans", "Papyrus", "Wingdings", "Arial"], "answer": "Comic Sans" },
-    { "question": "What is the unofficial mascot of the PHP programming language?", "options": ["An Elephant", "A Snake", "A Gopher", "A Dolphin"], "answer": "An Elephant" },
-    { "question": "What does the HTTP error code \"418\" famously mean?", "options": ["Server is Busy", "Unauthorized", "I'm a teapot", "Page Not Found"], "answer": "I'm a teapot" },
-    { "question": "Before it was named \"Java,\" the programming language was originally called what?", "options": ["C++", "Oak", "Latte", "Net"], "answer": "Oak" },
-    { "question": "The first-ever domain name registered on the internet was what?", "options": ["first.com", "internet.com", "symbolics.com", "aol.com"], "answer": "symbolics.com" },
-    { "question": "What does the \"QWERTY\" in the QWERTY keyboard layout stand for?", "options": ["It's the inventor's name", "The first six letters on the top row", "An acronym for \"Quick Word Entry, Readily Typed\"", "The company that invented it"], "answer": "The first six letters on the top row" },
-    { "question": "What is the official logo of the Python programming language?", "options": ["A snake", "Two snakes", "A lion", "A monkey"], "answer": "Two snakes" },
-    { "question": "The name of the first computer mouse prototype was...?", "options": ["X-Y Position Indicator for a Display System", "A Handheld Locator", "The Pointer", "The Electronic Rodent"], "answer": "X-Y Position Indicator for a Display System" },
-    { "question": "What is the name of the 'father of the computer'?", "options": ["Alan Turing", "Charles Babbage", "Bill Gates", "Ada Lovelace"], "answer": "Charles Babbage" },
-    { "question": "What does SQL stand for?", "options": ["Structured Query Language", "Simple Query Language", "Sequential Query Language", "Structured Question Logic"], "answer": "Structured Query Language" },
-    { "question": "Which of these is the most well-known computer virus?", "options": ["WannaCry", "Stuxnet", "Code Red", "I Love You"], "answer": "I Love You" }
+    { "question": "The term \"bug\" for a computer glitch was popularized after a real insect was found in which early computer?", "options": ["ENIAC", "Harvard Mark II", "A Dell Laptop", "IBM 701"], "answer": "Harvard Mark II" }
   ],
   "round2": [
     { "question": "Identify the company from this cropped logo.", "image": "/assets/images/puzzle1.png", "options": ["Twitter", "Firefox", "Facebook", "Telegram"], "answer": "Firefox" },
@@ -68,7 +57,13 @@
     { "question": "This company's logo is a piece of fruit. Which company is it?", "image": "/assets/images/puzzle12.png", "options": ["Raspberry Pi", "Blackberry", "Apricot Computers", "Apple"], "answer": "Apple" },
     { "question": "This logo, a steaming cup of coffee, represents which programming language?", "image": "/assets/images/puzzle13.png", "options": ["JavaScript", "Java", "C#", "LatteScript"], "answer": "Java" },
     { "question": "This pattern of black and white squares is a type of matrix barcode. What is it called?", "image": "/assets/images/puzzle14.png", "options": ["Barcode", "QR Code", "Data Matrix", "Semacode"], "answer": "QR Code" },
-    { "question": "What does this widely recognized symbol represent?", "image": "/assets/images/puzzle15.png", "options": ["Recycle", "Bluetooth", "USB", "Power On/Off"], "answer": "USB" }
+    { "question": "What does this widely recognized symbol represent?", "image": "/assets/images/puzzle15.png", "options": ["Recycle", "Bluetooth", "USB", "Power On/Off"], "answer": "USB" },
+    { "question": "This is the logo of which popular video-sharing platform?", "image": "/assets/images/puzzle16.png", "options": ["YouTube", "Vimeo", "Netflix", "TikTok"], "answer": "YouTube" },
+    { "question": "Which famous tech company has a logo featuring a small, bite-sized piece of fruit?", "image": "/assets/images/puzzle17.png", "options": ["Apple", "BlackBerry", "Fruit Ninja", "Nokia"], "answer": "Apple" },
+    { "question": "This is the logo for which popular social media and messaging app?", "image": "/assets/images/puzzle18.png", "options": ["WhatsApp", "Telegram", "Viber", "Signal"], "answer": "WhatsApp" },
+    { "question": "Which company's logo is a stylized bird?", "image": "/assets/images/puzzle19.png", "options": ["Twitter", "LinkedIn", "Snapchat", "Flickr"], "answer": "Twitter" },
+    { "question": "This logo is for which popular video game engine?", "image": "/assets/images/puzzle20.png", "options": ["Unity", "Unreal Engine", "Godot", "CryEngine"], "answer": "Unity" },
+    { "question": "This logo represents a popular software development methodology. What is it?", "image": "/assets/images/puzzle21.png", "options": ["Waterfall", "Agile", "Scrum", "Kanban"], "answer": "Agile" }
   ],
   "round3": [
     { "question": "In database transactions, what does the 'A' in the 'ACID' acronym stand for?", "options": ["Availability", "Atomicity", "Accuracy", "Abstraction"], "answer": "Atomicity" },
