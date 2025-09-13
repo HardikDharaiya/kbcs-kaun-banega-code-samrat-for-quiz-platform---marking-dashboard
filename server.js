@@ -1,4 +1,4 @@
-// KBCS SERVER v3.3 - FINAL TIMER FIX
+// KBCS SERVER v4.0 - MARKS CHART UPDATE
 
 const express = require('express');
 const http = require('http');
@@ -50,6 +50,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/setup', (req, res) => res.sendFile(path.join(__dirname, 'public', 'setup', 'index.html')));
 app.get('/dashboard', (req, res) => res.sendFile(path.join(__dirname, 'public', 'dashboard', 'index.html')));
 app.get('/quiz', (req, res) => res.sendFile(path.join(__dirname, 'public', 'quiz', 'index.html')));
+// --- NEW ROUTE ADDED ---
+app.get('/marks', (req, res) => res.sendFile(path.join(__dirname, 'public', 'marks', 'index.html')));
 
 
 // --- PRIMARY SOCKET.IO LOGIC ---
@@ -105,9 +107,11 @@ io.on('connection', (socket) => {
 // --- START THE SERVER ---
 server.listen(PORT, () => {
     loadInitialState();
-    console.log(`--------- KBCS SERVER IS LIVE (v3.3) ---------`);
+    console.log(`--------- KBCS SERVER IS LIVE (v4.0) ---------`);
     console.log(`🚀 Server is running on port ${PORT}`);
     console.log(`🔧 Access Team Setup at:           http://localhost:${PORT}/setup`);
+    // --- NEW LINE ADDED ---
+    console.log(`📊 Access Marks Chart at:          http://localhost:${PORT}/marks`);
     console.log(`🎮 Access the Marking Dashboard at: http://localhost:${PORT}/dashboard`);
     console.log(`📺 Access the Quiz Platform at:     http://localhost:${PORT}/quiz`);
     console.log(`------------------------------------------------`);

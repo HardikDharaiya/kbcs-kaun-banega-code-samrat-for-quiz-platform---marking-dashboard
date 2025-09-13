@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KBCS - Live Marks Chart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Teko:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="chart-container">
+      <h1 class="animate__animated animate__fadeInDown">
+        Kaun Banega Code Samrat - Live Scoreboard
+      </h1>
+      <canvas id="scoreChart"></canvas>
+    </div>
+
+    <!-- Offline Libraries -->
+    <script src="/assets/libs/chart.umd.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- Custom script for this page -->
+    <script src="script.js"></script>
+  </body>
+</html>
