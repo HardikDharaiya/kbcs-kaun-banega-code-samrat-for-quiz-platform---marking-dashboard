@@ -1,4 +1,4 @@
-// KBCS Dashboard Script v2.4 - Final Verified Version
+// KBCS Dashboard Script v3.3 - FINAL TIMER LOGIC
 
 const socket = io();
 
@@ -13,12 +13,15 @@ const previewAnswerText = document.getElementById('previewAnswerText');
 const nextQuestionBtn = document.getElementById('nextQuestionBtn');
 const toggleAnswerBtn = document.getElementById('toggleAnswerBtn');
 const clearScreenBtn = document.getElementById('clearScreenBtn');
+
+// Timer Buttons
 const startTimerBtn = document.getElementById('startTimerBtn');
+const stopTimerBtn = document.getElementById('stopTimerBtn');
+const resetTimerBtn = document.getElementById('resetTimerBtn');
 
 // Round Progression Buttons
 const setRound1Btn = document.getElementById('setRound1Btn');
 const setRound2Btn = document.getElementById('setRound2Btn');
-const setRound3Btn = document.getElementById('setRound3Btn');
 
 // Lifeline Buttons
 const lifeline5050Btn = document.getElementById('lifeline5050Btn');
@@ -43,10 +46,14 @@ socket.on('disconnect', () => {
     statusDot.classList.add('disconnected');
 });
 
-// The main listener that updates the entire dashboard based on the server's state
 socket.on('updateState', (state) => {
     renderTeams(state.teams);
-    renderPreview(state.currentQuestion, state.gameState.isScreenActive);
+    renderPreview(
+        state.currentQuestion, 
+        state.gameState.isScreenActive, 
+        state.gameState.currentQuestionIndex, 
+        state.roundQuestionCount
+    );
 });
 
 // --- UI Rendering Functions: Draw what the user sees ---
@@ -77,15 +84,13 @@ function renderTeams(teams) {
     });
 }
 
-function renderPreview(questionData, isScreenActive) {
+function renderPreview(questionData, isScreenActive, questionIndex, totalQuestions) {
     if (questionData && isScreenActive) {
-        previewQuestion.textContent = questionData.question;
-        // --- THIS IS THE FIX ---
-        // The variable is 'questionData', not 'question'.
+        const questionCounter = `Question (${questionIndex + 1} / ${totalQuestions}):`;
+        previewQuestion.innerHTML = `<strong>${questionCounter}</strong><br>${questionData.question}`;
         previewAnswerText.textContent = questionData.answer;
-        // ----------------------
     } else {
-        previewQuestion.textContent = 'Waiting for the next action...';
+        previewQuestion.innerHTML = 'Waiting for the next action...';
         previewAnswerText.textContent = '--';
     }
 }
@@ -105,17 +110,24 @@ teamContainer.addEventListener('click', (event) => {
 nextQuestionBtn.addEventListener('click', () => socket.emit('controls:nextQuestion'));
 toggleAnswerBtn.addEventListener('click', () => socket.emit('controls:toggleAnswer'));
 clearScreenBtn.addEventListener('click', () => socket.emit('controls:clearScreen'));
+
+// Timer Controls
 startTimerBtn.addEventListener('click', () => socket.emit('controls:startTimer'));
+stopTimerBtn.addEventListener('click', () => socket.emit('controls:stopTimer'));
+resetTimerBtn.addEventListener('click', () => socket.emit('controls:resetTimer'));
 
 // Round Progression Controls
-setRound1Btn.addEventListener('click', () => socket.emit('controls:setRound', { round: 1 }));
+setRound1Btn.addEventListener('click', () => {
+    socket.emit('controls:setRound', { round: 1 });
+    // The redundant startRoundTimer command has been removed.
+});
 setRound2Btn.addEventListener('click', () => socket.emit('controls:setRound', { round: 2 }));
-setRound3Btn.addEventListener('click', () => socket.emit('controls:setRound', { round: 3 }));
 
 // Lifeline Controls
 lifeline5050Btn.addEventListener('click', () => socket.emit('controls:lifeline', '5050'));
+lifelineSwapBtn.addEventListener('click', () => socket.emit('controls:lifeline', 'swap'));
 
-// Reset Controls (with confirmation dialogs for safety)
+// Reset Controls
 resetScoresBtn.addEventListener('click', () => {
     if (confirm('Are you sure you want to reset all team scores to 0?')) {
         socket.emit('controls:resetScores');

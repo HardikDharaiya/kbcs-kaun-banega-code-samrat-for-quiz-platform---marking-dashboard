@@ -1,23 +1,53 @@
 {
   "teams": [
     {
-      "id": 1757664262867,
-      "name": "aa",
+      "id": 1757785964088,
+      "name": "Bug Hunter",
       "score": 0
     },
     {
-      "id": 1757664263851,
-      "name": "aa",
+      "id": 1757785995319,
+      "name": "Syntax Master",
       "score": 0
     },
     {
-      "id": 1757664265093,
-      "name": "aaaaaa",
+      "id": 1757786021080,
+      "name": "Speed Coder",
       "score": 0
     },
     {
-      "id": 1757664265918,
-      "name": "aaaa",
+      "id": 1757786030652,
+      "name": "Brain Bytes",
+      "score": 0
+    },
+    {
+      "id": 1757786040212,
+      "name": "Logic Legends",
+      "score": 0
+    },
+    {
+      "id": 1757786048692,
+      "name": "The Syntax Snipers",
+      "score": 0
+    },
+    {
+      "id": 1757786056604,
+      "name": "Code Ninjas",
+      "score": 0
+    },
+    {
+      "id": 1757786064612,
+      "name": "Stack Smashers",
+      "score": 0
+    },
+    {
+      "id": 1757786072652,
+      "name": "Function Fanatics",
+      "score": 0
+    },
+    {
+      "id": 1757786080573,
+      "name": "Code Crushers",
       "score": 0
     }
   ],
