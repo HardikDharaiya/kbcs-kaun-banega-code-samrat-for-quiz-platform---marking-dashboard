@@ -43,7 +43,7 @@
     { "question": "The term \"bug\" for a computer glitch was popularized after a real insect was found in which early computer?", "options": ["ENIAC", "Harvard Mark II", "A Dell Laptop", "IBM 701"], "answer": "Harvard Mark II" }
   ],
   "round2": [
-    { "question": "Identify the company from this cropped logo.", "image": "/assets/images/puzzle1.png", "options": ["Twitter", "Firefox", "Facebook", "Telegram"], "answer": "Firefox" },
+    { "question": "What is the name of this vintage video game console?", "image": "/assets/images/puzzle1.png", "options": ["Magnavox Odyssey", "Fairchild Channel F", "Coleco Telstar", "Pong Home Console"], "answer": "Magnavox Odyssey" },
     { "question": "What is the primary UI/UX flaw shown in this image?", "image": "/assets/images/puzzle2.png", "options": ["Poor Color Contrast", "Inconsistent Button Styles", "No Clear Call to Action", "Text is Too Small"], "answer": "Inconsistent Button Styles" },
     { "question": "Which programming language's logo is this?", "image": "/assets/images/puzzle3.png", "options": ["Java", "C#", "Python", "Go"], "answer": "Go" },
     { "question": "What web technology is represented by this logo?", "image": "/assets/images/puzzle4.png", "options": ["HTML5", "CSS3", "JavaScript", "React"], "answer": "HTML5" },
@@ -51,17 +51,17 @@
     { "question": "This popular single-board computer is often used for electronics projects. What is it?", "image": "/assets/images/puzzle6.png", "options": ["Arduino Uno", "Intel NUC", "Raspberry Pi", "BeagleBone"], "answer": "Raspberry Pi" },
     { "question": "Which social media platform uses this icon for its 'Direct Messages'?", "image": "/assets/images/puzzle7.png", "options": ["Facebook", "LinkedIn", "Instagram", "Twitter"], "answer": "Instagram" },
     { "question": "What does this common icon typically represent in a user interface?", "image": "/assets/images/puzzle8.png", "options": ["Settings", "Edit", "Save", "Delete"], "answer": "Save" },
-    { "question": "This person is the founder of Facebook (now Meta). Who is he?", "image": "/assets/images/puzzle9.png", "options": ["Jeff Bezos", "Elon Musk", "Mark Zuckerberg", "Jack Dorsey"], "answer": "Mark Zuckerberg" },
+    { "question": "This person is the founder of Meta. Who is he?", "image": "/assets/images/puzzle9.png", "options": ["Jeff Bezos", "Elon Musk", "Mark Zuckerberg", "Jack Dorsey"], "answer": "Mark Zuckerberg" },
     { "question": "Which popular open-source database is represented by this dolphin logo?", "image": "/assets/images/puzzle10.png", "options": ["PostgreSQL", "SQLite", "MongoDB", "MySQL"], "answer": "MySQL" },
     { "question": "What is this green robot the official mascot for?", "image": "/assets/images/puzzle11.png", "options": ["Linux", "NVIDIA", "Android", "WhatsApp"], "answer": "Android" },
-    { "question": "This company's logo is a piece of fruit. Which company is it?", "image": "/assets/images/puzzle12.png", "options": ["Raspberry Pi", "Blackberry", "Apricot Computers", "Apple"], "answer": "Apple" },
+    { "question": "This symbol is commonly used to denote what type of wireless communication?", "image": "/assets/images/puzzle12.png", "options": ["Wi-Fi", "Bluetooth", "NFC", "Infrared"], "answer": "Wi-Fi" },
     { "question": "This logo, a steaming cup of coffee, represents which programming language?", "image": "/assets/images/puzzle13.png", "options": ["JavaScript", "Java", "C#", "LatteScript"], "answer": "Java" },
-    { "question": "This pattern of black and white squares is a type of matrix barcode. What is it called?", "image": "/assets/images/puzzle14.png", "options": ["Barcode", "QR Code", "Data Matrix", "Semacode"], "answer": "QR Code" },
+    { "question": "This symbol represents which technical concept in computing?", "image": "/assets/images/puzzle14.jpg", "options": ["Cache", "Quantum computing", "Parallel processing", "Turing machine"], "answer": "Quantum computing" },
     { "question": "What does this widely recognized symbol represent?", "image": "/assets/images/puzzle15.png", "options": ["Recycle", "Bluetooth", "USB", "Power On/Off"], "answer": "USB" },
-    { "question": "This is the logo of which popular video-sharing platform?", "image": "/assets/images/puzzle16.png", "options": ["YouTube", "Vimeo", "Netflix", "TikTok"], "answer": "YouTube" },
-    { "question": "Which famous tech company has a logo featuring a small, bite-sized piece of fruit?", "image": "/assets/images/puzzle17.png", "options": ["Apple", "BlackBerry", "Fruit Ninja", "Nokia"], "answer": "Apple" },
-    { "question": "This is the logo for which popular social media and messaging app?", "image": "/assets/images/puzzle18.png", "options": ["WhatsApp", "Telegram", "Viber", "Signal"], "answer": "WhatsApp" },
-    { "question": "Which company's logo is a stylized bird?", "image": "/assets/images/puzzle19.png", "options": ["Twitter", "LinkedIn", "Snapchat", "Flickr"], "answer": "Twitter" },
+    { "question": "This is a photo of a woman often called 'the first computer programmer'. Who is she?", "image": "/assets/images/puzzle16.png", "options": ["Grace Hopper", "Ada Lovelace", "Katherine Johnson", "Rosalind Franklin"], "answer": "Ada Lovelace" },
+    { "question": "This is a photo of the original team that developed a foundational operating system. Which OS did they create?", "image": "/assets/images/puzzle17.png", "options": ["UNIX", "MS-DOS", "Linux", "Mac OS"], "answer": "UNIX" },
+    { "question": "What is the name of this famous computer generated image, widely used in research for image compression and processing tests?", "image": "/assets/images/puzzle18.png", "options": ["Lena", "Mandrill", "Barbara", "Goldhill"], "answer": "Lena" },
+    { "question": "This is a screenshot of the first website ever created. Who was its creator?", "image": "/assets/images/puzzle19.png", "options": ["Tim Berners-Lee", "Marc Andreessen", "Robert Cailliau", "Vint Cerf"], "answer": "Tim Berners-Lee" },
     { "question": "This logo is for which popular video game engine?", "image": "/assets/images/puzzle20.png", "options": ["Unity", "Unreal Engine", "Godot", "CryEngine"], "answer": "Unity" },
     { "question": "This logo represents a popular software development methodology. What is it?", "image": "/assets/images/puzzle21.png", "options": ["Waterfall", "Agile", "Scrum", "Kanban"], "answer": "Agile" }
   ]

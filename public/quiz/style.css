@@ -223,10 +223,15 @@ body {
 }
 .curtain.visible, .answer-overlay.visible { opacity: 1; visibility: visible; }
 .curtain.hidden, .answer-overlay.hidden { opacity: 0; visibility: hidden; }
+/* Find and replace this rule */
 .curtain h2 {
     font-family: 'Teko', sans-serif;
-    font-size: 6em;
+    font-size: 5em;
     color: var(--accent-teal);
+    /* ADDED: A glowing neon text shadow */
+    text-shadow: 0 0 2.5px var(--accent-teal), 0 0 7.5px var(--accent-teal), 0 0 15px var(--accent-teal);
+    /* ADDED: A custom, slow breathing animation */
+    animation: breathingGlow 4s ease-in-out infinite;
 }
 .answer-overlay p { font-size: 2.5em; color: var(--text-secondary); }
 .answer-overlay h2 {
@@ -248,4 +253,29 @@ body {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Find and replace this rule */
+.curtain .logo {
+    max-width: 40%;
+    height: auto;
+    margin-bottom: 10px;
+    /* ADDED: A glowing shadow that follows the logo's shape */
+    filter: drop-shadow(0 0 15px var(--accent-pink));
+    /* ADDED: A slow, infinite pulsing animation */
+    animation: pulse 2.5s ease-in-out infinite;
+}
+
+/* --- ADD THIS AT THE VERY END OF THE FILE --- */
+@keyframes breathingGlow {
+  0% {
+    text-shadow: 0 0 2.5px var(--accent-teal), 0 0 7.5px var(--accent-teal), 0 0 15px var(--accent-teal);
+  }
+  20% {
+    text-shadow: 0 0 2.5px var(--accent-teal), 0 0 7.5px var(--accent-teal), 0 0 15px var(--accent-teal);
+  }
+  30% {
+    text-shadow: 0 0 2.5px var(--accent-teal), 0 0 7.5px var(--accent-teal), 0 0 15px var(--accent-teal);
+  }
 }
