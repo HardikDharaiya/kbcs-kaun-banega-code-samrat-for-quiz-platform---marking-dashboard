@@ -70,7 +70,7 @@ io.on('connection', (socket) => {
     socket.on('controls:nextQuestion', () => { const roundKey = `round${gameState.gameState.currentRound}`; if (shuffledQuestions[roundKey] && gameState.gameState.currentQuestionIndex < shuffledQuestions[roundKey].length - 1) { gameState.gameState.isScreenActive = true; gameState.gameState.currentQuestionIndex++; saveState(); broadcastState(); io.emit('hideAnswer'); } });
     socket.on('controls:toggleAnswer', () => { const roundKey = `round${gameState.gameState.currentRound}`; const question = shuffledQuestions[roundKey]?.[gameState.gameState.currentQuestionIndex]; if (question) io.emit('showAnswer', question.answer); });
     socket.on('controls:clearScreen', () => { gameState.gameState.isScreenActive = false; saveState(); broadcastState(); io.emit('hideAnswer'); });
-    
+
     // --- UPDATED setRound HANDLER ---
     socket.on('controls:setRound', ({ round }) => {
         gameState.gameState.currentRound = round;
@@ -101,6 +101,15 @@ io.on('connection', (socket) => {
     socket.on('controls:stopTimer', () => io.emit('stopQuestionTimer'));
     socket.on('controls:resetTimer', () => io.emit('resetQuestionTimer'));
     // The 'startRoundTimer' listener is now removed as it's handled by 'setRound'.
+
+    // --- ADD THIS NEW BLOCK ---
+    // Post-Event Control
+    socket.on('controls:showThankYou', () => {
+        // Stop the round timer when the event ends
+        if (roundTimerInterval) clearInterval(roundTimerInterval);
+        // Broadcast a simple command to all clients
+        io.emit('showThankYou');
+    });
 });
 
 

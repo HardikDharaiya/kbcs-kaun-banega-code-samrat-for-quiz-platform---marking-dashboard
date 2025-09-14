@@ -13,6 +13,7 @@ const answerText = document.getElementById('answerText');
 const questionImage = document.getElementById('questionImage');
 const curtainText = curtain.querySelector('h2');
 const answerOverlayText = answerOverlay.querySelector('h2');
+const thankYouOverlay = document.getElementById('thankYouOverlay');
 
 // Timer Text Elements
 const timerText = document.getElementById('timerText');
@@ -119,6 +120,23 @@ socket.on('resetQuestionTimer', () => {
 
 socket.on('roundTimeUpdate', (totalSeconds) => {
     roundTimerText.textContent = formatTime(totalSeconds);
+});
+
+// --- ADD THIS NEW BLOCK ---
+// Listens for the command to show the final thank you screen
+socket.on('showThankYou', () => {
+    // Hide all other overlays
+    curtain.classList.add('hidden');
+    answerOverlay.classList.add('hidden');
+    // Show the thank you overlay
+    thankYouOverlay.classList.remove('hidden');
+    thankYouOverlay.classList.add('visible');
+
+    // Animate the credits text
+    const credits = thankYouOverlay.querySelector('.credits h1');
+    if(credits) {
+        animateCSS(credits, 'zoomIn');
+    }
 });
 
 

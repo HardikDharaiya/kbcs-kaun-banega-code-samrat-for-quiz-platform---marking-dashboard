@@ -8,6 +8,8 @@ const statusDot = document.querySelector('.status-indicator .dot');
 const teamContainer = document.getElementById('teamContainer');
 const previewQuestion = document.getElementById('previewQuestion');
 const previewAnswerText = document.getElementById('previewAnswerText');
+// Post-Event Button
+const showThankYouBtn = document.getElementById('showThankYouBtn');
 
 // Game Flow Buttons
 const nextQuestionBtn = document.getElementById('nextQuestionBtn');
@@ -142,4 +144,9 @@ resetGameBtn.addEventListener('click', () => {
     if (confirm('Are you sure you want to fully reset the game? This will reset scores, set the game to Round 1, and shuffle the questions.')) {
         socket.emit('controls:resetGame');
     }
+});
+
+// Post-Event Control
+showThankYouBtn.addEventListener('click', () => {
+    socket.emit('controls:showThankYou');
 });

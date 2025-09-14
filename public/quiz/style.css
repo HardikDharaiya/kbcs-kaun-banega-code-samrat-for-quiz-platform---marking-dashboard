@@ -249,6 +249,38 @@ body {
 }
 .question-image.hidden { display: none; }
 
+
+/* --- ADD THIS NEW BLOCK --- */
+.credits {
+    text-align: center;
+    max-width: 80%;
+}
+
+.credits h1 {
+    font-family: 'Teko', sans-serif;
+    font-size: 6em;
+    color: var(--accent-teal);
+    text-shadow: 0 0 10px var(--accent-teal);
+    margin-bottom: 40px;
+}
+
+.credits h2 {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.5em;
+    color: var(--accent-yellow);
+    text-shadow: 0 0 10px var(--accent-teal);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.credits p {
+    font-size: 1.5em;
+    color: var(--text-primary);
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+
 /* Restored Keyframes */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
