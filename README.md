@@ -2,7 +2,6 @@
 
 > An all-in-one, locally-hosted, real-time quiz and event management platform designed for engaging live tech events. Built from the ground up in just two days by a team of two first-semester MCA students.
 
-![KBCS Quiz Screen](https://via.placeholder.com/800x450.png/0d1b2a/e0e1dd?text=KBCS+Quiz+Platform)
 
 ## About The Project
 
