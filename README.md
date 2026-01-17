@@ -38,41 +38,6 @@ The project demonstrates core concepts of **frontend development**, **JSON-based
 
 ---
 
-## 📂 Project Structure
-
-````
-
-kbcs-kaun-banega-code-samrat-for-quiz-platform---marking-dashboard
-│
-├── public
-│   ├── assets
-│   │   └── images
-│   │       ├── KBCS_LOGO.png
-│   │       ├── puzzle1.png
-│   │       ├── puzzle2.png
-│   │       ├── puzzle3.png
-│   │       ├── puzzle4.png
-│   │       ├── puzzle5.png
-│   │       ├── puzzle6.png
-│   │       ├── puzzle7.png
-│   │       ├── puzzle8.png
-│   │       ├── puzzle9.png
-│   │       ├── puzzle10.png
-│   │       └── ...
-│
-├── database.json
-├── questions.json
-├── index.html
-├── script.js
-├── styles.css
-├── package.json
-├── package-lock.json
-└── README.md
-
-````
-
----
-
 ## 📊 Dashboard Role
 
 - Acts as the **marking / evaluation panel**
