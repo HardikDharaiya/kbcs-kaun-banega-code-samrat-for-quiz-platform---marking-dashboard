@@ -107,14 +107,4 @@ The application runs on **port 8080**.
 4.  **Step 4: Run the Show!**
     *   Use the buttons on your dashboard to control the entire event, from starting rounds and showing questions to managing lifelines and timers.
 
-## Screenshots
-
-**The "Neon Night" Quiz Platform:**
-![KBCS Quiz Screen](https://via.placeholder.com/800x450.png/0d1b2a/e0e1dd?text=Main+Quiz+Screen+in+Action)
-
-**The Coordinator's "Mission Control" Dashboard:**
-![KBCS Dashboard](https://via.placeholder.com/800x450.png/1b263b/e0e1dd?text=Coordinator+Dashboard)
-
-**The Live Pictorial Marks Chart:**
-![KBCS Marks Chart](https://via.placeholder.com/800x450.png/0d1b2a/e0e1dd?text=Live+Marks+Chart)
 
