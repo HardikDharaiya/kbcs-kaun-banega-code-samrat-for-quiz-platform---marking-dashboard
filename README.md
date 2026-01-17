@@ -1,6 +1,6 @@
 # Kaun Banega Code Samrat (KBCS) - Live Quiz & Event Platform
 
-> An all-in-one, locally-hosted, real-time quiz and event management platform designed for engaging live tech events. Built from the ground up in just two days by a team of two first-semester MCA students.
+> An all-in-one, locally-hosted, real-time quiz and event management platform designed for engaging live tech events. Built from the ground up in just two days by first-semester MCA students.
 
 
 ## About The Project
@@ -11,7 +11,7 @@ This project is a complete suite of tools for managing a live quiz from start to
 
 ## Core Features
 
-*   **Real-Time Synchronization:** A powerful `Node.js` + `Socket.IO` backend ensures that the Coordinator's Dashboard, the main Quiz Platform, and the Marks Chart are all perfectly in sync with zero latency.
+*   **Real-Time Synchronization:** A powerful `Node.js` + `Socket.IO` backend ensures that the Coordinator's Dashboard, the main Quiz Platform, and the Marks Chart are all perfectly in sync with `zero latency`.
 *   **Multi-Panel Interface:**
     *   **Quiz Platform:** The main screen for the audience, featuring dynamic animations, timers, and a live leaderboard.
     *   **Marking Dashboard:** A comprehensive control panel for the event manager to control every aspect of the game.
